@@ -87,3 +87,13 @@ body {
   overflow: hidden;
 }
 
+/* 友链 */
+.friendLink {
+  text-align: center;
+  color: #ddd;
+}
+.friendLink a {
+  margin-right: 5px;
+  
+  color: #ddd;
+}
