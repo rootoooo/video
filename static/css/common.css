@@ -1,4 +1,46 @@
 body {
-  background-color: #505050;
-  font-size: 14px;
+  font-size: 25px;
+}
+
+/* 导航条 */
+.nav {
+  display: flex;
+  justify-content: center;
+  height: 74px;
+  margin-top: 5vh;
+}
+
+/* 导航条-输入框 */
+.nav .search {
+  width: 50%;
+  margin: 0 5px;
+
+  outline: none;
+  font-size: 22px;
+}
+
+/* 导航条-按钮 */
+.nav button {
+  width: 10%;
+
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  font-size: 25px;
+}
+
+.nav .clear {
+  margin-left: 5px;
+}
+
+/* 播放器 */
+.player {
+  display: block;
+  margin: 20px auto;
+  width: 94%;
+  height: 60vh;
+  
+  background-color: #ddd;
+  border: none;
+  overflow: hidden;
 }
