@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>皮皮虾看电影</title>
+  <base target="_blank">
   <link rel="stylesheet" href="./static/css/reset.css">
   <link rel="stylesheet" href="./static/css/common.css">
   <link rel="stylesheet" media="(min-width: 980px)" href="./static/css/big-style.css">
@@ -12,6 +13,10 @@
 
   <!-- 搜索栏 -->
   <div class="nav">
+    <div class="route">
+      <div class="title">播放线路选择</div>
+      <ul class="list"></ul>
+    </div>
     <input type="text" class="search" autofocus>
     <button class="click">播放</button>
     <button class="clear">清空</button>
@@ -19,6 +24,9 @@
 
   <!-- 播放器 -->
   <iframe src="" class="player" allowfullscreen allowtransparency></iframe>
+
+  <!-- 友情链接 -->
+  <div class="friendLink">梦里啥都有：</div>
 
   <script src="./static/js/data.js"></script>
   <script src="./static/js/main.js"></script>
