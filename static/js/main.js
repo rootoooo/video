@@ -3,10 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const playButton = document.querySelector('.click');
   const clearButton = document.querySelector('.clear');
   const player = document.querySelector('.player');
-  const routeList = document.querySelector('.list');
 
   function play(url) {
-    const selectedRoute = routes.find(route => route.name === currentRoute);
+    const selectedRoute = routes[0];
     player.src = selectedRoute.url + url;
   }
 
@@ -28,18 +27,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Add routes to the route list
-  routes.forEach(route => {
-    const li = document.createElement('li');
-    li.textContent = route.name;
-    li.addEventListener('click', function () {
-      currentRoute = route.name;
-      document.querySelector('.route .title').textContent = currentRoute;
-      routeList.style.display = 'none';
-    });
-    routeList.appendChild(li);
-  });
-
-  let currentRoute = routes[0].name;
-  document.querySelector('.route .title').textContent = currentRoute;
+  document.querySelector('.route .title').textContent = routes[0].name;
 });
