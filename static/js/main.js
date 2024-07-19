@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const player = document.querySelector('.player');
 
   function play(url) {
-    const selectedRoute = routes[0];
+    const selectedRoute = routes[0]; // 只有一个解析线路，直接使用第一个
     player.src = selectedRoute.url + url;
   }
 
@@ -26,6 +26,4 @@ document.addEventListener('DOMContentLoaded', function () {
       searchInput.value = '';
     }
   });
-
-  document.querySelector('.route .title').textContent = routes[0].name;
 });
