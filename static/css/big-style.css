@@ -10,48 +10,6 @@ body {
   margin-top: 5vh;
 }
 
-/* 导航条-播放列表 */
-.nav .route {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 150px;
-
-  background-color: #ddd;
-}
-
-.nav .route .title {
-  cursor: pointer;
-}
-
-.nav .route:hover .list {
-  display: block;
-}
-
-.route .list {
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 74px;
-
-  text-align: center;
-  background-color: #0d0;
-}
-
-.route .list li {
-  height: 40px;
-
-  line-height: 40px;
-  cursor: pointer;
-  font-size: 24px;
-}
-
-.route .list li:hover {
-  background-color: #ff0;
-}
-
 /* 导航条-输入框 */
 .nav .search {
   width: 50%;
