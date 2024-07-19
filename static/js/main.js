@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function play(url) {
     const selectedRoute = routes[0]; // 只有一个解析线路，直接使用第一个
-    player.src = selectedRoute.url + url;
+    if (url) {
+      player.src = selectedRoute.url + encodeURIComponent(url);
+    }
   }
 
   playButton.addEventListener('click', function () {
