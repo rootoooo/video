@@ -1,8 +1,8 @@
 const routes = [
-  {name: 'BL解析', url: 'https://svip.bljiex.cc/?v='}, 
-  {name: '虾米解析', url: 'https://jx.xmflv.com/?url='},
-  {name: 'JSON解析', url: 'https://jx.jsonplayer.com/player/?url='},
-  {name: '影猫の仓库 ', url: 'https://ymck.pro/search.html?wd='}, 
+  {name: 'm3u8', url: 'https://jx.m3u8.tv/jiexi/?url=}, 
+  {name: '虾米', url: 'https://jx.xmflv.com/?url='},
+  {name: '爱豆', url: 'https://jx.aidouer.net/?url='}，
+  {name: 'CK '， url: 'https://www.ckplayer.vip/jiexi/?url='}, 
 ]
 
 const friends = [
