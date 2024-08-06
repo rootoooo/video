@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>皮皮虾Video</title>
+    <link rel="icon" type="jpge"href="https://i.ooookk.com/file/ba2dfcf9e8533837d9777.jpg" />
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family:"微软雅黑";
+            background-color:rgba(75, 174, 240, 0.6);
+        }
+        .box {
+            position: absolute;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%,-50%);
+            /* 当使用：top: 50%;left: 50%;， 是以左上角为原点，故不处于中心位置
+            translate(-50%,-50%) 作用是，往上（x轴）,左（y轴）移动自身长宽的 50%，以使其居于中心位置 */
+            width: 80%;
+            padding:20px;
+            background-color: #fff;
+            /* margin:5% auto; */
+        }
+        #myselect {
+            width: 100%;
+            padding: 8px;
+            font-size: 18px;
+        }
+        #vipurl {
+            width: 98%;
+            padding: 8px;
+            font-size: 18px;
+        }
+        .button {
+            /* 光标变成小手 */
+            
+            cursor: pointer;
+            width: 100%;
+            height: 40px;
+            background: #444444;
+            color:#FFFFFF;
+            text-align:center;
+            font-size: 18px;
+            line-height: 40px;
+            border:none;
+        }
+        .button:hover{ 
+            background: #BBBBBB;
+            color:#444444;
+        }
+    </style>
+    <script> 
+        function geturl(){ 
+            //获取选中的解析网址
+            var api = document.getElementById("myselect");
+            var apiUrl = api.options[api.selectedIndex].value;
+            //获取输入的视频网址
+            var inputUrl = document.getElementById("vipurl").value;
+            var myUrl = apiUrl + inputUrl; 
+            window.open(myUrl);
+        }
+    </script> 
+</head>
+
+<body> 
+    <div class="box" >
+        <p align="center">
+            <b style="font-size:28px;color:#444444;">皮皮虾Video</b>
+            <small><i style="color:#888888;">By Jenas</i></small>
+        </p>
+        <!-- <form> -->
+            <label>
+                <p><b style="font-size: 20px;color:#444444">虾笼</b></p>
+                <select id="myselect" class="textbox" >
+                    <!--VIP视频解析线路-->
+                    <optgroup label="默认线路">
+                        <option value="https://jx.xmflv.com/?url=" >西北玄天一片云</option>
+                    </optgroup>
+                    <optgroup label="实测可用">
+                        <option value="https://jx.xmflv.cc/?url=" >乌鸦落在凤凰群</option>
+                        <option value="https://jx.m3u8.tv/jiexi/?url=" >满堂尽是英雄汉</option>
+                        <option value="https://www.yemu.xyz/?url=" >谁是君来谁是臣</option>
+                    </optgroup>
+                    <!--VIP视频解析线路-->
+                </select>
+            </label>
+            <br><br>
+            <label>
+                <p><b style="font-size: 20px;color:#444444">皮皮虾biubiubiu</b></p>
+                <input type="url" id="vipurl" name="vipurl" placeholder="例：http://www.iqiyi.com/v_19rrbooge4.html" required >
+            </label>
+            <br><br>
+            <input type="submit" class="button" value="皮皮虾我们走" onclick="geturl()">
+        <!-- </form> -->
+    </div>
+</body>
+</html>
