@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>道法自然</title>
-    <link rel="icon" type="jpge"href="https://i.haoss.eu.org/file/ba2dfcf9e8533837d9777.jpg" />
+    <link rel="icon" type="image/jpeg" href="https://i.haoss.eu.org/file/ba2dfcf9e8533837d9777.jpg" />
     <style type="text/css">
-        *{
-            margin:0;
-            padding:0;
+        * {
+            margin: 0;
+            padding: 0;
         }
-        body{
-            font-family:"微软雅黑";
-            background-color:rgba(75, 174, 240, 0.6);
+        body {
+            font-family: "微软雅黑";
+            background-color: rgba(75, 174, 240, 0.6);
             min-height: 100vh;
             position: relative;
         }
@@ -20,9 +20,9 @@
             position: absolute;
             left: 50%;
             top: 30%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             width: 80%;
-            padding:20px;
+            padding: 20px;
             background-color: #fff;
         }
         #myselect {
@@ -40,15 +40,24 @@
             width: 100%;
             height: 40px;
             background: #444444;
-            color:#FFFFFF;
-            text-align:center;
+            color: #FFFFFF;
+            text-align: center;
             font-size: 18px;
             line-height: 40px;
-            border:none;
+            border: none;
         }
-        .button:hover{ 
+        .button:hover { 
             background: #BBBBBB;
-            color:#444444;
+            color: #444444;
+        }
+        .image-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
         }
         footer {
             position: absolute;
@@ -63,7 +72,7 @@
         }
     </style>
     <script> 
-        function geturl(){ 
+        function geturl() { 
             var api = document.getElementById("myselect");
             var apiUrl = api.options[api.selectedIndex].value;
             var inputUrl = document.getElementById("vipurl").value;
@@ -99,6 +108,11 @@
         </label>
         <br><br>
         <input type="submit" class="button" value="临兵斗者皆阵列前行" onclick="geturl()">
+    </div>
+
+    <!-- 添加图片的部分 -->
+    <div class="image-container">
+        <img src="https://i.haoss.eu.org/file/ba2dfcf9e8533837d9777.jpg" alt="皮皮虾">
     </div>
 
     <footer>
