@@ -3,63 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>道法自然</title>
-    <link rel="icon" type="jpge"href="https://im.gurl.eu.org/file/AgACAgEAAxkDAAIUUWd_xyKFSvPJ2QIkbc5QMCd79gWiAAL_rTEbl5EBRDBGmoz44374AQADAgADeAADNgQ.jpg" />
+    <title>皮皮虾</title>
+    <link rel="icon" type="image/jpeg" href="https://im.gurl.eu.org/file/AgACAgEAAxkDAAIUUWd_xyKFSvPJ2QIkbc5QMCd79gWiAAL_rTEbl5EBRDBGmoz44374AQADAgADeAADNgQ.jpg" />
     <style type="text/css">
-        *{
-            margin:0;
-            padding:0;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        body{
-            font-family:"微软雅黑";
-            background-color:rgba(75, 174, 240, 0.6);
+        body {
+            font-family: "微软雅黑";
+            background-color: rgba(75, 174, 240, 0.6);
             min-height: 100vh;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        。box {
-            position: absolute;
-            left: 50%;
-            top: 30%;
-            transform: translate(-50%,-50%);
+        .box {
             width: 80%;
-            padding:20px;
+            max-width: 600px;
+            padding: 20px;
             background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
         }
-        #myselect {
+        #myselect, #vipurl {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             font-size: 18px;
+            margin-top: 10px;
         }
-        #vipurl {
-            width: 98%;
-            padding: 8px;
-            font-size: 18px;
-        }
-        。button {
+        .button {
             cursor: pointer;
             width: 100%;
-            height: 40px;
+            height: 45px;
+            margin-top: 20px;
             background: #444444;
-            color:#FFFFFF;
-            text-align:center;
+            color: #FFFFFF;
+            text-align: center;
             font-size: 18px;
-            line-height: 40px;
-            border:none;
+            line-height: 45px;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
-        。button:hover{ 
+        .button:hover { 
             background: #BBBBBB;
-            color:#444444;
+            color: #444444;
         }
         footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            text-align: center;
+            margin-top: 30px;
             padding: 10px;
             font-size: 14px;
             background-color: #f0f0f0;
             color: #444444;
+            width: 100%;
+            text-align: center;
         }
     </style>
     <script> 
@@ -75,29 +76,26 @@
 
 <body> 
     <div class="box">
-        <p align="center">
-            <b style="font-size:28px;color:#444444;">时也，命也，运也，非吾之所能也！</b>
+        <p>
+            <b style="font-size:28px;color:#444444;">时也，命也，运也，非吾之所能也！</b><br>
             <small><i style="color:#888888;">By Jenas</i></small>
         </p>
-        <label>
-            <p><b style="font-size: 20px;color:#444444">命里有时终须有，命里无时莫强求！</b></p>
-            <select id="myselect" class="textbox">
-                <optgroup label="半生风雨孤舟渡">
-                    <option value="https://jx.playerjy.com/?url=" >一命二运三风水</option>
-                </optgroup>
-                <optgroup label="苦尽甘来万象新">
-                    <option value="https://jx.xmflv.com/?url=" >四积阴德五读书</option>
-                    <option value="https://jx.m3u8.tv/jiexi/?url=" >六名七相八敬神</option>
-                    <option value="https://www.pangujiexi.com/jiexi/?url=" >九交贵人十养生</option>
-                </optgroup>
-            </select>
-        </label>
-        <br><br>
-        <label>
-            <p><b style="font-size: 20px;color:#444444">天地本无极</b></p>
-            <input type="url" id="vipurl" name="vipurl" placeholder="太极生两仪，两仪生四象，四象生八卦，八卦定吉凶，吉凶生大业，大业必有小成，小成必有大成！" required >
-        </label>
-        <br><br>
+        <br>
+        <p><b style="font-size: 20px;color:#444444">命里有时终须有，命里无时莫强求！</b></p>
+        <select id="myselect">
+            <optgroup label="半生风雨孤舟渡">
+                <option value="https://jx.playerjy.com/?url=" >一命二运三风水</option>
+            </optgroup>
+            <optgroup label="苦尽甘来万象新">
+                <option value="https://jx.xmflv.com/?url=" >四积阴德五读书</option>
+                <option value="https://jx.m3u8.tv/jiexi/?url=" >六名七相八敬神</option>
+                <option value="https://www.pangujiexi.com/jiexi/?url=" >九交贵人十养生</option>
+            </optgroup>
+        </select>
+        <br>
+        <p><b style="font-size: 20px;color:#444444">天地本无极</b></p>
+        <input type="url" id="vipurl" name="vipurl" placeholder="太极生两仪，两仪生四象，四象生八卦，八卦定吉凶，吉凶生大业，大业必有小成，小成必有大成！" required >
+        <br>
         <input type="submit" class="button" value="临兵斗者皆阵列前行" onclick="geturl()">
     </div>
 
