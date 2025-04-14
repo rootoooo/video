@@ -29,7 +29,8 @@
             border-radius: 10px;
             text-align: center;
         }
-        #myselect, #vipurl {
+        #myselect,
+        #vipurl {
             width: 100%;
             padding: 10px;
             font-size: 18px;
@@ -49,32 +50,33 @@
             border-radius: 5px;
             transition: all 0.3s ease;
         }
-        .button:hover { 
+        .button:hover {
             background: #BBBBBB;
             color: #444444;
         }
         footer {
             margin-top: 30px;
             padding: 10px;
-            font-size: 14px;
-            background-color: #f0f0f0;
-            color: #444444;
+            font-size: 18px;
+            background-color: transparent;
+            color: #333333;
             width: 100%;
             text-align: center;
+            line-height: 1.8;
         }
     </style>
-    <script> 
-        function geturl(){ 
+    <script>
+        function geturl() {
             var api = document.getElementById("myselect");
             var apiUrl = api.options[api.selectedIndex].value;
             var inputUrl = document.getElementById("vipurl").value;
-            var myUrl = apiUrl + inputUrl; 
+            var myUrl = apiUrl + inputUrl;
             window.open(myUrl);
         }
-    </script> 
+    </script>
 </head>
 
-<body> 
+<body>
     <div class="box">
         <p>
             <b style="font-size:28px;color:#444444;">时也，命也，运也，非吾之所能也！</b><br>
@@ -84,23 +86,24 @@
         <p><b style="font-size: 20px;color:#444444">命里有时终须有，命里无时莫强求！</b></p>
         <select id="myselect">
             <optgroup label="半生风雨孤舟渡">
-                <option value="https://jx.playerjy.com/?url=" >一命二运三风水</option>
+                <option value="https://jx.playerjy.com/?url=">一命二运三风水</option>
             </optgroup>
             <optgroup label="苦尽甘来万象新">
-                <option value="https://jx.xmflv.com/?url=" >四积阴德五读书</option>
-                <option value="https://jx.m3u8.tv/jiexi/?url=" >六名七相八敬神</option>
-                <option value="https://www.pangujiexi.com/jiexi/?url=" >九交贵人十养生</option>
+                <option value="https://jx.xmflv.com/?url=">四积阴德五读书</option>
+                <option value="https://jx.m3u8.tv/jiexi/?url=">六名七相八敬神</option>
+                <option value="https://www.pangujiexi.com/jiexi/?url=">九交贵人十养生</option>
             </optgroup>
         </select>
         <br>
         <p><b style="font-size: 20px;color:#444444">天地本无极</b></p>
-        <input type="url" id="vipurl" name="vipurl" placeholder="太极生两仪，两仪生四象，四象生八卦，八卦定吉凶，吉凶生大业，大业必有小成，小成必有大成！" required >
+        <input type="url" id="vipurl" name="vipurl" placeholder="太极生两仪，两仪生四象，四象生八卦，八卦定吉凶，吉凶生大业，大业必有小成，小成必有大成！" required>
         <br>
         <input type="submit" class="button" value="临兵斗者皆阵列前行" onclick="geturl()">
     </div>
 
     <footer>
-        穷算命运富烧香，颠颠倒倒问阴阳；若是做好分内事，何须鬼神赐良方；十人烧香九为财，又有几炷真香来；神明不缺三炷香，善心善念财自来！
+        穷算命运富烧香，颠颠倒倒问阴阳；若是做好分内事，何须鬼神赐良方；<br>
+        十人烧香九为财，又有几炷真香来；神明不缺三炷香，善心善念财自来！
     </footer>
 </body>
 </html>
