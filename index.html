@@ -83,28 +83,6 @@
       display: none;
     }
 
-    .mPower {
-      position: fixed;
-      bottom: 30px;
-      left: 30px;
-      z-index: 999;
-    }
-
-    .mPower span {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background: url('https://img.icons8.com/ios-filled/50/ffffff/play--v1.png') center center no-repeat;
-      background-size: contain;
-      cursor: pointer;
-    }
-
-    #on { display: inline-block; }
-    #off { 
-      background-image: url('https://img.icons8.com/ios-filled/50/ffffff/pause--v1.png');
-      display: none;
-    }
-
     @media (max-width: 480px) {
       .box {
         padding: 20px 15px;
@@ -113,15 +91,6 @@
   </style>
 </head>
 <body>
-
-  <!-- 背景音乐 -->
-  <audio id="bgmMusic" src="月半小夜曲.mp3" autoplay="autoplay" loop preload="auto" type="audio/mp3"></audio>
-
-  <!-- 控制按钮 -->
-  <div class="mPower">
-    <span id="on" title="点击暂停"></span>
-    <span id="off" title="点击播放"></span>
-  </div>
 
   <!-- 主体内容 -->
   <div class="box">
@@ -172,21 +141,6 @@
       var myUrl = apiUrl + encodeURIComponent(inputUrl);
       window.open(myUrl, "_blank");
     }
-
-    // 音乐控制
-    $(document).ready(function () {
-      var audio = document.getElementById("bgmMusic");
-      $("#on").click(function () {
-        audio.pause();
-        $("#on").hide();
-        $("#off").show();
-      });
-      $("#off").click(function () {
-        audio.play();
-        $("#on").show();
-        $("#off").hide();
-      });
-    });
   </script>
 </body>
 </html>
