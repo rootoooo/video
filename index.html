@@ -1,132 +1,152 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>皮皮虾</title>
-    <link rel="icon" type="image/jpeg" href="https://im.gurl.eu.org/file/AgACAgEAAxkDAAIUUWd_xyKFSvPJ2QIkbc5QMCd79gWiAAL_rTEbl5EBRDBGmoz44374AQADAgADeAADNgQ.jpg" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>皮皮虾</title>
+  <link rel="icon" type="image/jpeg" href="https://im.gurl.eu.org/file/AgACAgEAAxkDAAIUUWd_xyKFSvPJ2QIkbc5QMCd79gWiAAL_rTEbl5EBRDBGmoz44374AQADAgADeAADNgQ.jpg" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: "微软雅黑", sans-serif;
-            background: linear-gradient(135deg, rgba(75, 174, 240, 0.8), rgba(255, 255, 255, 0.6));
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-        }
+    html, body {
+      height: 100%;
+      font-family: "微软雅黑", sans-serif;
+      overflow-x: hidden;
+    }
 
-        .box {
-            width: 100%;
-            max-width: 600px;
-            padding: 30px 25px;
-            background-color: #ffffffdd;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            border-radius: 15px;
-            text-align: center;
-        }
+    body {
+      background: url("https://picsum.photos/1920/1080?blur") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      animation: fadeIn 1.5s ease-in-out;
+    }
 
-        .box p {
-            margin-bottom: 15px;
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-        select, input[type="url"], .button {
-            width: 100%;
-            padding: 12px;
-            font-size: 18px;
-            margin-top: 12px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            outline: none;
-        }
+    .box {
+      background-color: rgba(255, 255, 255, 0.88);
+      padding: 30px 25px;
+      border-radius: 15px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
 
-        .button {
-            background-color: #444;
-            color: #fff;
-            border: none;
-            transition: 0.3s;
-        }
+    .box p {
+      margin-bottom: 15px;
+    }
 
-        .button:hover {
-            background-color: #bbb;
-            color: #444;
-        }
+    select,
+    input[type="url"],
+    .button {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      margin-top: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
 
-        footer {
-            margin-top: 30px;
-            padding: 10px;
-            font-size: 16px;
-            color: #333;
-            text-align: center;
-            line-height: 1.8;
-            max-width: 600px;
-        }
+    .button {
+      background-color: #444;
+      color: #fff;
+      border: none;
+      transition: all 0.3s ease;
+    }
 
-        small {
-            display: block;
-            margin-top: 5px;
-            color: #777;
-        }
+    .button:hover {
+      background-color: #bbb;
+      color: #444;
+    }
 
-        @media (max-width: 480px) {
-            .box {
-                padding: 20px 15px;
-            }
-        }
-    </style>
-    <script>
-        function geturl() {
-            var api = document.getElementById("myselect");
-            var apiUrl = api.options[api.selectedIndex].value;
-            var inputUrl = document.getElementById("vipurl").value.trim();
-            if (!inputUrl) {
-                alert("请输入视频链接！");
-                return;
-            }
-            var myUrl = apiUrl + encodeURIComponent(inputUrl);
-            window.open(myUrl, "_blank");
-        }
-    </script>
+    footer {
+      margin-top: 30px;
+      padding: 15px 20px;
+      font-size: 16px;
+      color: #f0f0f0;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      text-align: center;
+      line-height: 1.8;
+      max-width: 600px;
+      backdrop-filter: blur(3px);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 480px) {
+      .box {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+  <script>
+    function geturl() {
+      var api = document.getElementById("myselect");
+      var apiUrl = api.options[api.selectedIndex].value;
+      var inputUrl = document.getElementById("vipurl").value.trim();
+      if (!inputUrl) {
+        alert("请输入视频链接！");
+        return;
+      }
+      var myUrl = apiUrl + encodeURIComponent(inputUrl);
+      window.open(myUrl, "_blank");
+    }
+  </script>
 </head>
 <body>
 
-    <div class="box">
-        <p><b style="font-size: 26px; color: #444;">时也，命也，运也，非吾之所能也！</b></p>
-        <small><i>By Jenas</i></small>
+  <!-- 背景音乐，放你将来上传的 mp3，比如 XXX.mp3 -->
+  <audio autoplay loop hidden>
+    <source src="XXX.mp3" type="audio/mpeg">
+    您的浏览器不支持音频播放。
+  </audio>
 
-        <p><b style="font-size: 20px; color: #444;">命里有时终须有，命里无时莫强求！</b></p>
+  <div class="box">
+    <p><b style="font-size: 26px; color: #444;">时也，命也，运也，非吾之所能也！</b></p>
+    <small class="hidden"><i>By Jenas</i></small>
 
-        <select id="myselect">
-            <optgroup label="半生风雨孤舟渡">
-                <option value="https://jx.playerjy.com/?url=">一命二运三风水</option>
-            </optgroup>
-            <optgroup label="苦尽甘来万象新">
-                <option value="https://www.yemu.xyz/?url=">四积阴德五读书</option>
-                <option value="https://jx.m3u8.tv/jiexi/?url=">六名七相八敬神</option>
-                <option value="https://www.pangujiexi.com/jiexi/?url=">九交贵人十养生</option>
-            </optgroup>
-        </select>
+    <p><b style="font-size: 20px; color: #444;">命里有时终须有，命里无时莫强求！</b></p>
 
-        <p><b style="font-size: 20px; color: #444;">天地本无极</b></p>
+    <select id="myselect">
+      <optgroup label="半生风雨孤舟渡">
+        <option value="https://jx.playerjy.com/?url=">一命二运三风水</option>
+      </optgroup>
+      <optgroup label="苦尽甘来万象新">
+        <option value="https://www.yemu.xyz/?url=">四积阴德五读书</option>
+        <option value="https://jx.m3u8.tv/jiexi/?url=">六名七相八敬神</option>
+        <option value="https://www.pangujiexi.com/jiexi/?url=">九交贵人十养生</option>
+      </optgroup>
+    </select>
 
-        <input type="url" id="vipurl" placeholder="太极生两仪，两仪生四象，四象生八卦，八卦定吉凶…" required>
+    <p><b style="font-size: 20px; color: #444;">天地本无极</b></p>
 
-        <input type="submit" class="button" value="临兵斗者皆阵列前行" onclick="geturl()">
-    </div>
+    <input type="url" id="vipurl" placeholder="太极生两仪，两仪生四象，四象生八卦…" required>
 
-    <footer>
-        穷算命运富烧香，颠颠倒倒问阴阳；<br>
-        若是做好分内事，何须鬼神赐良方；<br>
-        十人烧香九为财，又有几炷真香来；<br>
-        神明不缺三炷香，善心善念财自来！
-    </footer>
+    <input type="submit" class="button" value="临兵斗者皆阵列前行" onclick="geturl()">
+  </div>
+
+  <footer>
+    穷算命运富烧香，颠颠倒倒问阴阳；<br>
+    若是做好分内事，何须鬼神赐良方；<br>
+    十人烧香九为财，又有几炷真香来；<br>
+    神明不缺三炷香，善心善念财自来！
+  </footer>
 
 </body>
 </html>
