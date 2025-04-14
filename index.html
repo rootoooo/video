@@ -1,89 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>皮皮虾</title>
     <link rel="icon" type="image/jpeg" href="https://im.gurl.eu.org/file/AgACAgEAAxkDAAIUUWd_xyKFSvPJ2QIkbc5QMCd79gWiAAL_rTEbl5EBRDBGmoz44374AQADAgADeAADNgQ.jpg" />
-    <style type="text/css">
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            font-family: "微软雅黑";
-            background-color: rgba(75, 174, 240, 0.6);
+            font-family: "微软雅黑", sans-serif;
+            background: linear-gradient(135deg, rgba(75, 174, 240, 0.8), rgba(255, 255, 255, 0.6));
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-        。box {
-            width: 80%;
-            max-width: 600px;
+            flex-direction: column;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+        }
+
+        .box {
+            width: 100%;
+            max-width: 600px;
+            padding: 30px 25px;
+            background-color: #ffffffdd;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 15px;
             text-align: center;
         }
-        #myselect,
-        #vipurl {
-            width: 100%;
-            padding: 10px;
-            font-size: 18px;
-            margin-top: 10px;
+
+        .box p {
+            margin-bottom: 15px;
         }
-        。button {
-            cursor: pointer;
+
+        select, input[type="url"], .button {
             width: 100%;
-            height: 45px;
-            margin-top: 20px;
-            background: #444444;
-            color: #FFFFFF;
-            text-align: center;
+            padding: 12px;
             font-size: 18px;
-            line-height: 45px;
+            margin-top: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .button {
+            background-color: #444;
+            color: #fff;
             border: none;
-            border-radius: 5px;
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
-        。button:hover {
-            background: #BBBBBB;
-            color: #444444;
+
+        .button:hover {
+            background-color: #bbb;
+            color: #444;
         }
+
         footer {
             margin-top: 30px;
             padding: 10px;
-            font-size: 18px;
-            background-color: transparent;
-            color: #333333;
-            width: 100%;
+            font-size: 16px;
+            color: #333;
             text-align: center;
             line-height: 1.8;
+            max-width: 600px;
+        }
+
+        small {
+            display: block;
+            margin-top: 5px;
+            color: #777;
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                padding: 20px 15px;
+            }
         }
     </style>
     <script>
         function geturl() {
             var api = document.getElementById("myselect");
             var apiUrl = api.options[api.selectedIndex].value;
-            var inputUrl = document.getElementById("vipurl").value;
-            var myUrl = apiUrl + inputUrl;
-            window.open(myUrl);
+            var inputUrl = document.getElementById("vipurl").value.trim();
+            if (!inputUrl) {
+                alert("请输入视频链接！");
+                return;
+            }
+            var myUrl = apiUrl + encodeURIComponent(inputUrl);
+            window.open(myUrl, "_blank");
         }
     </script>
 </head>
-
 <body>
+
     <div class="box">
-        <p>
-            <b style="font-size:28px;color:#444444;">时也，命也，运也，非吾之所能也！</b><br>
-            <small><i style="color:#888888;">By Jenas</i></small>
-        </p>
-        <br>
-        <p><b style="font-size: 20px;color:#444444">命里有时终须有，命里无时莫强求！</b></p>
+        <p><b style="font-size: 26px; color: #444;">时也，命也，运也，非吾之所能也！</b></p>
+        <small><i>By Jenas</i></small>
+
+        <p><b style="font-size: 20px; color: #444;">命里有时终须有，命里无时莫强求！</b></p>
+
         <select id="myselect">
             <optgroup label="半生风雨孤舟渡">
                 <option value="https://jx.playerjy.com/?url=">一命二运三风水</option>
@@ -94,16 +113,20 @@
                 <option value="https://www.pangujiexi.com/jiexi/?url=">九交贵人十养生</option>
             </optgroup>
         </select>
-        <br>
-        <p><b style="font-size: 20px;color:#444444">天地本无极</b></p>
-        <input type="url" id="vipurl" name="vipurl" placeholder="太极生两仪，两仪生四象，四象生八卦，八卦定吉凶，吉凶生大业，大业必有小成，小成必有大成！" required>
-        <br>
+
+        <p><b style="font-size: 20px; color: #444;">天地本无极</b></p>
+
+        <input type="url" id="vipurl" placeholder="太极生两仪，两仪生四象，四象生八卦，八卦定吉凶…" required>
+
         <input type="submit" class="button" value="临兵斗者皆阵列前行" onclick="geturl()">
     </div>
 
     <footer>
-        穷算命运富烧香，颠颠倒倒问阴阳；若是做好分内事，何须鬼神赐良方；<br>
-        十人烧香九为财，又有几炷真香来；神明不缺三炷香，善心善念财自来！
+        穷算命运富烧香，颠颠倒倒问阴阳；<br>
+        若是做好分内事，何须鬼神赐良方；<br>
+        十人烧香九为财，又有几炷真香来；<br>
+        神明不缺三炷香，善心善念财自来！
     </footer>
+
 </body>
 </html>
