@@ -87,19 +87,19 @@
     },
     "91": {
       "api": "https://91md.me/api.php/provide/vod",
-      "name": "小猫咪资源"
+      "name": "91"
     },
     "MD": {
       "api": "http://www.madouse.la/api.php/provide/vod",
-      "name": "小猫咪资源"
+      "name": "MD"
     },
     "LS": {
       "api": "https://slapibf.com/api.php/provide/vod",
-      "name": "小猫咪资源"
+      "name": "LS"
     },
     "CL": {
       "api": "https://www.caoliuzyw.com/api.php/prodao/vod",
-      "name": "小猫咪资源"
+      "name": "CL"
     }
   }
 }
