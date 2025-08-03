@@ -1,21 +1,69 @@
 {
   "cache_time": 7200,
   "api_site": {
-    "91": {
-      "api": "https://91md.me/api.php/provide/vod",
-      "name": "91"
-    },
-    "MD": {
-      "api": "http://www.madouse.la/api.php/provide/vod",
-      "name": "MD"
-    },
     "LS": {
-      "api": "https://slapibf.com/api.php/provide/vod",
-      "name": "LS"
+      "api": "https://slapibf.com/api.php/provide/vod/",
+      "name": "森林资源|AV"
+    },
+    "TT": {
+      "api": "https://apittzy.com/api.php/provide/vod/",
+      "name": "探探资源|AV"
+    },
+    "AO": {
+      "api": "https://aosikazy.com/api.php/provide/vod/",
+      "name": "奥斯卡资源|AV"
+    },
+    "DY": {
+      "api": "https://api.apilyzy.com/api.php/provide/vod/",
+      "name": "老鸭资源|AV"
+    },
+    "91": {
+      "api": "https://91md.me/api.php/provide/vod/",
+      "name": "91麻豆|AV"
+    },
+    "YK": {
+      "api": "https://api.yikanapi.com/api.php/provide/vod/",
+      "name": "易看资源|AV"
+    },
+    "FH": {
+      "api": "http://fhapi9.com/api.php/provide/vod/",
+      "name": "番号资源|AV"
+    },
+    "SY": {
+      "api": "https://shayuapi.com/api.php/provide/vod/",
+      "name": "鲨鱼资源|AV"
+    },
+    "AI": {
+      "api": "http://lbapiby.com/api.php/provide/vod/at/json",
+      "name": "AIvin|AV"
+    },
+    "HG": {
+      "api": "https://www.zy018.com/api.php/provide/vod/",
+      "name": "黄瓜资源|AV"
+    },
+    "YT": {
+      "api": "https://apiyutu.com/api.php/provide/vod/",
+      "name": "玉兔资源|AV"
+    },
+    "LJ": {
+      "api": "https://apilj.com/api.php/provide/vod/",
+      "name": "辣椒资源|AV"
+    },
+    "NX": {
+      "api": "https://Naixxzy.com/api.php/provide/vod/",
+      "name": "奶香香|AV"
+    },
+    "JP": {
+      "api": "https://www.jingpinx.com/api.php/provide/vod/",
+      "name": "精品资源|AV"
     },
     "CL": {
-      "api": "https://www.caoliuzyw.com/api.php/prodao/vod",
-      "name": "CL"
+      "api": "https://www.caoliuzyw.com/api.php/prodao/vod/",
+      "name": "草榴资源|AV"
+    },
+    "LSB": {
+      "api": "https://apilsbzy1.com/api.php/provide/vod/",
+      "name": "老色逼资源|AV"
     }
   }
 }
